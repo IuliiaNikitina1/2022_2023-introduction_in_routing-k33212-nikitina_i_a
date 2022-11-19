@@ -14,7 +14,7 @@ Lab: Lab1
 
 Date of create: 04.11.2022
 
-Date of finished: ...
+Date of finished: 
 
 ## Отчет по лабораторной работе №1:
 ### ["Установка ContainerLab и развертывание тестовой сети связи"](https://itmo-ict-faculty.github.io/introduction-in-routing/education/labs2022_2023/lab1/lab1/)
@@ -24,12 +24,10 @@ Date of finished: ...
 
 #### 2. Ход работы:
 
-1. После установки программ Docker и ContainerLab и клонирования репозитория 
-[hellt/vrnetlab](https://github.com/hellt/vrnetlab) на компьютере был создан новый образ.
+1. После установки программ Docker и ContainerLab и клонирования репозитория [hellt/vrnetlab](https://github.com/hellt/vrnetlab) на компьютере был создан новый образ.
 
-2. На базе ContainerLab была развернута сеть трехуровневого предприятия, состоящая из следующего оборудования:
-одного роутера (R01.TEST), одного коммутаторов первого уровня (SW01.L3.01.TEST),
-двух коммутаторв второго уровня (SW02.L3.01.TEST и SW02.L3.02.TEST), а также двух конечных устройств (PC1 и PC2).
+2. На базе ContainerLab была развернута сеть трехуровневого предприятия, состоящая из следующего оборудования: одного роутера (R01.TEST), одного коммутаторов первого уровня (SW01.L3.01.TEST),двух коммутаторв второго уровня (SW02.L3.01.TEST и SW02.L3.02.TEST), а также двух конечных устройств (PC1 и PC2).
+
 Конфигурация файла сети представлена ниже:
 
 ```
@@ -80,21 +78,50 @@ topology:
         - endpoints: ["SW02.L3.02.TEST:eth2", "PC2:eth1"]
 ```
 
+
 3. Следующим шагом была написана конфигурация для каждого сетевого устройства.
+
+
 
 3.1 Для роутера R01.TEST:
 
 ![R01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/R01.TEST.png)
 
+
 3.2 Для коммутатора SW01.L3.01.TEST:
 
 ![SW01.L3.01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW01.L3.01.png)
+
 
 3.3 Для коммутатора SW02.L3.01.TEST:
 
 ![SW02.L3.01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW02.L3.01.png)
 
+
 3.4 Для коммутатора SW02.L3.02.TEST:
 
 ![SW02.L3.02.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW02.L3.02.png)
+
+
+4. Для проверки работы сети были осуществлены попытки пропинговать устройства:
+
+С роутера **R01.TEST**:
+
+![R01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__R01.TEST.png)
+
+
+С коммутатора **SW01.L3.01.TEST**:
+
+![SW01.L3.01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW01.L3.01.png)
+
+
+С коммутатора **SW02.L3.01.TEST**:
+
+![SW02.L3.01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW02.L3.01.png)
+
+
+#### 3. Вывод:
+
+В ходе лабораторной работы были выполнены все поставленные задачи. В частности, был на практике изучен процесс развертывания трехуровневой сети, в результате которого было осуществлено соединение между устройствами в разных локальных сетях, а также настроена автоматическая раздача IP-адресов через DHCP-сервер.
+
 
