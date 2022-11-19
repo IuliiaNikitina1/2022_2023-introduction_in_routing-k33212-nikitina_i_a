@@ -82,42 +82,47 @@ topology:
 3. Следующим шагом была написана конфигурация для каждого сетевого устройства.
 
 
+3.1 Для роутера **R01.TEST**: 
 
-3.1 Для роутера R01.TEST:
-
-![R01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/R01.TEST.png)
-
-
-3.2 Для коммутатора SW01.L3.01.TEST:
-
-![SW01.L3.01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW01.L3.01.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/R01.TEST.png" width = "600" height = "500" alt = "R01.TEST"/>
 
 
-3.3 Для коммутатора SW02.L3.01.TEST:
 
-![SW02.L3.01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW02.L3.01.png)
+3.2 Для коммутатора **SW01.L3.01.TEST**: 
+
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW01.L3.01.png" width = "600" height = "500" alt = "SW01.L3.01.TEST"/>
 
 
-3.4 Для коммутатора SW02.L3.02.TEST:
 
-![SW02.L3.02.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW02.L3.02.png)
+3.3 Для коммутатора **SW02.L3.01.TEST**: 
+
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW02.L3.01.png" width = "600" height = "500" alt = "SW02.L3.01.TEST"/>
+
+
+
+3.4 Для коммутатора **SW02.L3.02.TEST**: 
+
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/SW02.L3.02.png" width = "600" height = "500" alt = "SW02.L3.02.TEST"/>
+
 
 
 4. Для проверки работы сети были осуществлены попытки пропинговать устройства:
 
 С роутера **R01.TEST**:
 
-![R01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__R01.TEST.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__R01.TEST.png" width = "700" height = "500" alt = "R01.TEST"/>
+
 
 
 С коммутатора **SW01.L3.01.TEST**:
 
-![SW01.L3.01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW01.L3.01.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW01.L3.01.png" width = "700" height = "500" alt = "SW01.L3.01.TEST"/>
+
 
 
 С коммутатора **SW02.L3.01.TEST**:
 
-![SW02.L3.01.TEST](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW02.L3.01.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW02.L3.01.png" width = "700" height = "500" alt = "SW02.L3.01.TEST"/>
 
 
 #### 3. Вывод:
