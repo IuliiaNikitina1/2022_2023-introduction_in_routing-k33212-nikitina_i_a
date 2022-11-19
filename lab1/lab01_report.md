@@ -110,19 +110,19 @@ topology:
 
 С роутера **R01.TEST**:
 
-<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__R01.TEST.png" width = "700" height = "500" alt = "R01.TEST"/>
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__R01.TEST.png" width = "550" height = "350" alt = "R01.TEST"/>
 
 
 
 С коммутатора **SW01.L3.01.TEST**:
 
-<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW01.L3.01.png" width = "700" height = "500" alt = "SW01.L3.01.TEST"/>
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW01.L3.01.png" width = "550" height = "350" alt = "SW01.L3.01.TEST"/>
 
 
 
 С коммутатора **SW02.L3.01.TEST**:
 
-<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW02.L3.01.png" width = "700" height = "500" alt = "SW02.L3.01.TEST"/>
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab1/images/ping__SW02.L3.01.png" width = "550" height = "350" alt = "SW02.L3.01.TEST"/>
 
 
 #### 3. Вывод:
