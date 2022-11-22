@@ -79,7 +79,7 @@ topology:
 
 **Схема сети**:
 
-![схема]()
+![схема](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab2/images/lab-2.drawio.png)
 
 
 Конфигурация **R01.BRL**:
@@ -212,17 +212,17 @@ set name=PC3
 
 Ping с компьютера **PC1**:
 
-/
+![PC1](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab2/images/PC1.png)
 
 
 Ping с компьютера **PC2**:
 
-/
+![PC2](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab2/images/PC2.png)
 
 
 Ping с компьютера **PC3**:
 
-/
+![PC3](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab2/images/PC3.png)
 
 
 #### 3. Вывод:
