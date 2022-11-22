@@ -164,8 +164,8 @@ add disabled=no interface=ether2
 /ip route
 add distance=1 dst-address=160.1.0.0/30 gateway=192.168.3.1
 add distance=1 dst-address=160.1.2.0/30 gateway=192.168.3.1
+add distance=1 dst-address=192.168.1.0/24 gateway=192.168.3.1
 add distance=1 dst-address=192.168.2.0/24 gateway=192.168.3.1
-add distance=1 dst-address=192.168.3.0/24 gateway=192.168.3.1
 /system identity
 set name=PC1
 ```
