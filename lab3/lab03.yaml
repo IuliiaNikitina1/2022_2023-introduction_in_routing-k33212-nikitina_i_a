@@ -1,4 +1,4 @@
-```
+
 name: lab3
 
 mgmt:
@@ -58,4 +58,4 @@ topology:
     - endpoints: ["R01.MSK:eth2","R01.SPB:eth1"]
     - endpoints: ["R01.HKI:eth3","R01.SPB:eth2"]
     - endpoints: ["R01.SPB:eth3","PC1:eth1"]
-```
+
