@@ -314,42 +314,46 @@ add disabled=no interface=ether1
 set name=PC1
 ```
 
-3. Готовые таблицы MPLS маршрутов представлены на скринах ниже.
+3. Готовые **таблицы MPLS** маршрутов представлены на скринах ниже. Они были получены с помощью команды:
 
-Для **R01.NY**:
+```
+mpls forwarding-table print
+```
+
+* **R01.NY**:
 
 ![R01.NY](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/NY.png)
 
-Для **R01.LND**:
+* **R01.LND**:
 
 ![R01.LND](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/LND.png)
 
-Для **R01.HKI**:
+* **R01.HKI**:
 
 ![R01.HKI](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/HKI.png)
 
-Для **R01.SPB**:
+* **R01.SPB**:
 
 ![R01.SPB](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/SPB.png)
 
-Для **R01.MSK**:
+* **R01.MSK**:
 
 ![R01.MSK](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/MSK.png)
 
 
-Для **R01.LBN**:
+* **R01.LBN**:
 
 ![R01.LBN](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/LBN.png)
 
 
 4. В качестве проверки работы сети была протестирована передача данных между устройствами SGI-Prism и PC1. Для этого была использована утилита ping. Результаты проверки представлены ниже.
 
-Ping с **SGI-Prism** на PC1: 
+* Ping с **SGI-Prism** на PC1: 
 
 ![SGI](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/sgi.png)
 
 
-Ping с **PC1** на SGI-prism:
+* Ping с **PC1** на SGI-prism:
 
 ![PC1](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/PC1.png)
 
@@ -357,4 +361,7 @@ Ping с **PC1** на SGI-prism:
 
 #### 3. Выводы:
 
-  В ходе выполнения данной лабораторной работы ///
+  В ходе выполнения данной лабораторной работы была успешно собрана схема связи IP/MPLS сети компании "RogaIKopita Games". На шести роутерах (R01.NY, R01.LND, R01.HKI, R01.SPB, R01.MSK, R01.LBN) были настроены  EOPF и MPLS, а также EoMPLS. На контейнерах, связанных между собой EoMPLS, была назначена адресация. На всех интерфейсах были указаны IP-адреса. В результате удалось установить соединение между устройствами SGI-Prism и PC1, расположенными в удаленных регионах.
+  
+  
+  
