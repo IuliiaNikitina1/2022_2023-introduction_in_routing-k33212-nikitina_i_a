@@ -14,7 +14,7 @@ Lab: Lab1
 
 Date of create: 04.11.2022
 
-Date of finished: 
+Date of finished: 02.12.2022
 
 ## Отчет по лабораторной работе №1:
 ### ["Установка ContainerLab и развертывание тестовой сети связи"](https://itmo-ict-faculty.github.io/introduction-in-routing/education/labs2022_2023/lab1/lab1/)
