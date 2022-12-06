@@ -110,94 +110,249 @@ topology:
 Конфигурация **R01.NY**:
 
 ```
-/
+/interface bridge
+add name=EoMPLS_B
+add name=Lo0
+/interface vpls
+add cisco-style=yes cisco-style-id=100 disabled=no l2mtu=1500 mac-address=\
+    02:9F:31:44:50:A4 name=EoMPLS remote-peer=4.4.4.4
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/routing ospf instance
+set [ find default=yes ] router-id=1.1.1.1
+/interface bridge port
+add bridge=EoMPLS_B interface=ether2
+add bridge=EoMPLS_B interface=EoMPLS
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.20.1.1/30 interface=ether3 network=172.20.1.0
+add address=172.20.2.1/30 interface=ether4 network=172.20.2.0
+add address=1.1.1.1 interface=Lo0 network=1.1.1.1
+/ip dhcp-client
+add disabled=no interface=ether1
+/mpls ldp
+set enabled=yes transport-address=1.1.1.1
+/mpls ldp interface
+add interface=ether3
+add interface=ether4
+/routing ospf network
+add area=backbone
+/system identity
+set name=R01.NY
 
 ```
 
 Конфигурация **R01.LND**:
 
 ```
-/
+/interface bridge
+add name=Lo0
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.20.1.2/30 interface=ether2 network=172.20.1.0
+add address=172.20.3.1/30 interface=ether3 network=172.20.3.0
+add address=2.2.2.2 interface=Lo0 network=2.2.2.2
+/ip dhcp-client
+add disabled=no interface=ether1
+/mpls ldp
+set enabled=yes
+/mpls ldp interface
+add interface=ether2
+add interface=ether3
+/routing ospf network
+add area=backbone
+/system identity
+set name=R01.LND
 ```
 
 Конфигурация **R01.HKI**:
 
 ```
-/
-```
-
-Конфигурация **R01.MSK**:
-
-```
-/
+/interface bridge
+add name=Lo0
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/routing ospf instance
+set [ find default=yes ] router-id=3.3.3.3
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.20.3.2/30 interface=ether2 network=172.20.3.0
+add address=172.20.4.1/30 interface=ether3 network=172.20.4.0
+add address=172.20.5.1/30 interface=ether4 network=172.20.5.0
+add address=3.3.3.3 interface=Lo0 network=3.3.3.3
+/ip dhcp-client
+add disabled=no interface=ether1
+/mpls ldp
+set enabled=yes
+/mpls ldp interface
+add interface=ether2
+add interface=ether3
+add interface=ether4
+/routing ospf network
+add area=backbone
+/system identity
+set name=R01.HKI
 ```
 
 Конфигурация **R01.SPB**:
 
 ```
-/
+/interface bridge
+add name=EoMPLS_B
+add name=Lo0
+/interface vpls
+add cisco-style=yes cisco-style-id=100 disabled=no l2mtu=1500 mac-address=02:A3:EA:0D:77:AF \
+    name=EoMPLS remote-peer=1.1.1.1
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/routing ospf instance
+set [ find default=yes ] router-id=4.4.4.4
+/interface bridge port
+add bridge=EoMPLS_B interface=ether4
+add bridge=EoMPLS_B interface=EoMPLS
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.20.5.2/30 interface=ether2 network=172.20.5.0
+add address=172.20.6.1/30 interface=ether3 network=172.20.6.0
+add address=4.4.4.4 interface=Lo0 network=4.4.4.4
+/ip dhcp-client
+add disabled=no interface=ether1
+/mpls ldp
+set enabled=yes
+/mpls ldp interface
+add interface=ether2
+add interface=ether3
+/routing ospf network
+add area=backbone
+/system identity
+set name=R01.SPB
+```
+
+Конфигурация **R01.MSK**:
+
+```
+/interface bridge
+add name=Lo0
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/routing ospf instance
+set [ find default=yes ] router-id=5.5.5.5
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.20.7.1/30 interface=ether2 network=172.20.7.0
+add address=172.20.6.2/30 interface=ether3 network=172.20.6.0
+add address=5.5.5.5 interface=Lo0 network=5.5.5.5
+/ip dhcp-client
+add disabled=no interface=ether1
+/mpls ldp
+set enabled=yes
+/mpls ldp interface
+add interface=ether2
+add interface=ether3
+/routing ospf network
+add area=backbone
+/system identity
+set name=R01.MSK
 ```
 
 Конфигурация **R01.LBN**:
 
 ```
-/
+/interface bridge
+add name=Lo0
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/routing ospf instance
+set [ find default=yes ] router-id=6.6.6.6
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=172.20.2.2/30 interface=ether2 network=172.20.2.0
+add address=172.20.4.2/30 interface=ether3 network=172.20.4.0
+add address=172.20.7.2/30 interface=ether4 network=172.20.7.0
+add address=6.6.6.6 interface=Lo0 network=6.6.6.6
+/ip dhcp-client
+add disabled=no interface=ether1
+/mpls ldp
+set enabled=yes
+/mpls ldp interface
+add interface=ether2
+add interface=ether3
+add interface=ether4
+/routing ospf network
+add area=backbone
+/system identity
+set name=R01.LBN
 ```
 
 Конфигурация **SGI-Prism**:
 
 ```
-/
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=160.0.0.1/24 interface=ether2 network=160.0.0.0
+/ip dhcp-client
+add disabled=no interface=ether1
+/system identity
+set name=SGI-Prism
 ```
 
 Конфигурация **PC1**:
 
 ```
-/
+/interface wireless security-profiles
+set [ find default=yes ] supplicant-identity=MikroTik
+/ip address
+add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
+add address=160.0.0.2/24 interface=ether2 network=160.0.0.0
+/ip dhcp-client
+add disabled=no interface=ether1
+/system identity
+set name=PC1
 ```
 
 3. Готовые таблицы MPLS маршрутов представлены на скринах ниже.
 
 Для **R01.NY**:
 
-![R01.NY](//)
+![R01.NY](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/NY.png)
 
 Для **R01.LND**:
 
-![R01.LND](//)
+![R01.LND](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/LND.png)
 
 Для **R01.HKI**:
 
-![R01.HKI](//)
-
-Для **R01.MSK**:
-
-![R01.MSK](//)
+![R01.HKI](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/HKI.png)
 
 Для **R01.SPB**:
 
-![R01.SPB](//)
+![R01.SPB](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/SPB.png)
+
+Для **R01.MSK**:
+
+![R01.MSK](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/MSK.png)
+
 
 Для **R01.LBN**:
 
-![R01.LBN](//)
+![R01.LBN](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/LBN.png)
 
 
-4. В качестве проверки работы сети была протестирована передача данных между ///. Для этого была использована утилита ping. Результаты проверки представлены ниже.
+4. В качестве проверки работы сети была протестирована передача данных между устройствами SGI-Prism и PC1. Для этого была использована утилита ping. Результаты проверки представлены ниже.
 
-Ping с 
+Ping с **SGI-Prism** на PC1: 
 
-///
-
-
-Ping с 
-
-///
+![SGI](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/sgi.png)
 
 
-Ping с 
+Ping с **PC1** на SGI-prism:
 
-//
+![PC1](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/images/PC1.png)
+
 
 
 #### 3. Выводы:
