@@ -94,7 +94,7 @@ topology:
 
 **Схема сети**:
 
-![схема](//)
+![схема](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab3/lab03.drawio.png)
 
 Конфигурация включала в себя:
 
