@@ -14,7 +14,7 @@ Lab: Lab2
 
 Date of create: 20.11.2022
 
-Date of finished: ...
+Date of finished: 02.12.2022
 
 ## Отчет по лабораторной работе №2:
 ### ["Эмуляция распределенной корпоративной сети связи, настройка статической маршрутизации между филиалами"](https://itmo-ict-faculty.github.io/introduction-in-routing/education/labs2022_2023/lab2/lab2/)
