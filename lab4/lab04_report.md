@@ -26,13 +26,83 @@ Date of finished: ...
 
 #### 2. Ход работы:
 
+##### Часть 1. Настройка L3VPN
+
 1. В первую очередь, в файле формата .yaml была составлена конфигурация по развертыванию сети связи. Содержимое этого файла представлено ниже:
 
 ```
-///
+name: lab4
+
+mgmt:
+  network: statics4
+  ipv4_subnet: 160.20.20.0/24
+
+topology:
+  
+  nodes:
+    R01.NY: 
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9 
+      mgmt_ipv4: 160.20.20.2
+
+    R01.LND:
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt_ipv4: 160.20.20.3
+
+    R01.HKI:
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt_ipv4: 160.20.20.4
+
+    R01.SPB:
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt_ipv4: 160.20.20.5
+
+    R01.LBN:
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt_ipv4: 160.20.20.6
+    
+    R01.SVL:
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt_ipv4: 160.20.20.7
+
+    PC1:
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt_ipv4: 160.20.20.8
+    
+    PC2:
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt_ipv4: 160.20.20.9
+
+    PC3:
+      kind: vr-ros
+      image: vrnetlab/vr-routeros:6.47.9
+      mgmt_ipv4: 160.20.20.10
+
+  links:
+    - endpoints: ["R01.NY:eth1","R01.LND:eht1"]
+    - endpoints: ["R01.LND:eth2","R01.HKI:eth1"]
+    - endpoints: ["R01.LND:eth3","R01.LBN:eth1"]
+    - endpoints: ["R01.HKI:eth2","R01.SPB:eth1"]
+    - endpoints: ["R01.HKI:eth3","R01.LBN:eth2"]
+    - endpoints: ["R01.LBN:eth3","R01.SVL:eth1"]
+    - endpoints: ["PC1:eth1","R01.SPB:eth2"]
+    - endpoints: ["PC2:eth1","R01.NY:eth2"]
+    - endpoints: ["PC3:eth1","R01.SVL:eth2"]
 ```
 
 2. ///
+
+
+##### Часть 2. Настройка VPLS
+
+//
 
 
 #### 3. Выводы:
