@@ -32,7 +32,7 @@ Date of finished: ...
 
 Схема сети связи с подробной информацией об адресах сетей и всеии интерфейсами представлена на схема ниже:
 
-[схема]!(https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/lab4.drawio.png)
+![схема](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/lab4.drawio.png)
 
 1. В первую очередь, в файле формата .yaml была составлена конфигурация по развертыванию сети связи. Содержимое этого файла представлено ниже:
 
