@@ -41,7 +41,7 @@ name: lab4
 
 mgmt:
   network: statics4
-  ipv4_subnet: 160.20.20.0/24
+  ipv4_subnet: 190.20.20.0/24
 
 topology:
   
@@ -49,47 +49,47 @@ topology:
     R01.NY: 
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9 
-      mgmt_ipv4: 160.20.20.2
+      mgmt_ipv4: 190.20.20.12
 
     R01.LND:
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 160.20.20.3
+      mgmt_ipv4: 190.20.20.13
 
     R01.HKI:
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 160.20.20.4
+      mgmt_ipv4: 190.20.20.14
 
     R01.SPB:
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 160.20.20.5
+      mgmt_ipv4: 190.20.20.15
 
     R01.LBN:
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 160.20.20.6
+      mgmt_ipv4: 190.20.20.16
     
     R01.SVL:
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 160.20.20.7
+      mgmt_ipv4: 190.20.20.17
 
     PC1:
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 160.20.20.8
+      mgmt_ipv4: 190.20.20.18
     
     PC2:
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 160.20.20.9
+      mgmt_ipv4: 190.20.20.19
 
     PC3:
       kind: vr-ros
       image: vrnetlab/vr-routeros:6.47.9
-      mgmt_ipv4: 160.20.20.10
+      mgmt_ipv4: 190.20.20.20
 
   links:
     - endpoints: ["R01.NY:eth1","R01.LND:eht1"]
@@ -144,6 +144,7 @@ set name=R01.NY
 * R01.LND:
 
 ```
+/interface bridge
 add name=Lo
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
@@ -232,6 +233,9 @@ add address=160.10.5.2/30 interface=ether2 network=160.10.5.0
 add address=192.168.1.1/30 interface=ether3 network=192.168.1.0
 /ip dhcp-client
 add disabled=no interface=ether1
+/ip route vrf
+add export-route-targets=65530:100 import-route-targets=65530:100 interfaces=ether3 \
+    route-distinguisher=65530:100 routing-mark=VRF_DEVOPS
 /mpls ldp
 set enabled=yes
 /mpls ldp interface
