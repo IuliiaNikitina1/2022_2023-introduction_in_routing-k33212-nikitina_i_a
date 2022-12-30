@@ -225,7 +225,7 @@ add name=Lo
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /routing bgp instance
-set default router-id=4.4.4.4
+set default redistribute-connected=yes router-id=4.4.4.4
 /routing ospf instance
 set [ find default=yes ] router-id=4.4.4.4
 /ip address
@@ -299,7 +299,7 @@ add name=Lo
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /routing bgp instance
-set default router-id=6.6.6.6
+set default redistribute-connected=yes
 /routing ospf instance
 set [ find default=yes ] router-id=6.6.6.6
 /ip address
