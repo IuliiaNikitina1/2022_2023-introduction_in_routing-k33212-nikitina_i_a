@@ -119,8 +119,8 @@ set [ find default=yes ] router-id=1.1.1.1
 /ip address
 add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
 add address=1.1.1.1 interface=Lo network=1.1.1.1
-add address=160.10.1.1/30 interface=ether2 network=160.10.1.0
-add address=192.168.2.1/30 interface=ether3 network=192.168.2.0
+add address=192.168.2.1/30 interface=ether2 network=192.168.2.0
+add address=160.10.1.1/30 interface=ether3 network=160.10.1.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /ip route vrf
