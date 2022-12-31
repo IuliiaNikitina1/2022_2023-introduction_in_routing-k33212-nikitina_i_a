@@ -125,7 +125,7 @@ add address=192.168.2.1/30 interface=ether3 network=192.168.2.0
 add disabled=no interface=ether1
 /ip route vrf
 add export-route-targets=65530:100 import-route-targets=65530:100 interfaces=\
-    ether2 route-distinguisher=65530:100 routing-mark=VRF_DEVOPS
+    ether3 route-distinguisher=65530:100 routing-mark=VRF_DEVOPS
 /mpls ldp
 set enabled=yes
 /mpls ldp interface
