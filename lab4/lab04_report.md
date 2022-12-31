@@ -125,11 +125,11 @@ add address=160.10.1.1/30 interface=ether3 network=160.10.1.0
 add disabled=no interface=ether1
 /ip route vrf
 add export-route-targets=65530:100 import-route-targets=65530:100 interfaces=\
-    ether3 route-distinguisher=65530:100 routing-mark=VRF_DEVOPS
+    ether2 route-distinguisher=65530:100 routing-mark=VRF_DEVOPS
 /mpls ldp
 set enabled=yes
 /mpls ldp interface
-add interface=ether2
+add interface=ether3
 /routing bgp instance vrf
 add redistribute-connected=yes routing-mark=VRF_DEVOPS
 /routing bgp peer
