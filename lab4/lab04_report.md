@@ -92,15 +92,15 @@ topology:
       mgmt_ipv4: 190.20.20.20
 
   links:
-    - endpoints: ["R01.NY:eth1","R01.LND:eht1"]
+    - endpoints: ["PC1:eth1","R01.SPB:eth2"]
+    - endpoints: ["PC2:eth1","R01.NY:eth1"]
+    - endpoints: ["PC3:eth1","R01.SVL:eth2"]
+    - endpoints: ["R01.NY:eth2","R01.LND:eth1"]
     - endpoints: ["R01.LND:eth2","R01.HKI:eth1"]
     - endpoints: ["R01.LND:eth3","R01.LBN:eth1"]
     - endpoints: ["R01.HKI:eth2","R01.SPB:eth1"]
     - endpoints: ["R01.HKI:eth3","R01.LBN:eth2"]
     - endpoints: ["R01.LBN:eth3","R01.SVL:eth1"]
-    - endpoints: ["PC1:eth1","R01.SPB:eth2"]
-    - endpoints: ["PC2:eth1","R01.NY:eth2"]
-    - endpoints: ["PC3:eth1","R01.SVL:eth2"]
 ```
 
 2. Следом за развертыванием сети была произведена настройка каждого роутера. Текст всех конфигураций представлен ниже:
