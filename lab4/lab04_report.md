@@ -129,7 +129,7 @@ add export-route-targets=65530:100 import-route-targets=65530:100 interfaces=\
 /mpls ldp
 set enabled=yes
 /mpls ldp interface
-add interface=ether3
+add interface=ether2
 /routing bgp instance vrf
 add redistribute-connected=yes routing-mark=VRF_DEVOPS
 /routing bgp peer
