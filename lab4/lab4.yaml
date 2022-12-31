@@ -2,7 +2,7 @@ name: lab4
 
 mgmt:
   network: statics4
-  ipv4_subnet: 160.20.20.0/24
+  ipv4_subnet: 190.20.20.0/24
 
 topology:
   
