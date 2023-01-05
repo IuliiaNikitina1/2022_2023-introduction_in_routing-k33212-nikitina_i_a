@@ -260,6 +260,8 @@ set name=R01.SPB
 add name=Lo
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
+/routing bgp instance
+set default router-id=5.5.5.5
 /routing ospf instance
 set [ find default=yes ] router-id=5.5.5.5
 /ip address
