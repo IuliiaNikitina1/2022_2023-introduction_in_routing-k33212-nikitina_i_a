@@ -299,7 +299,7 @@ add name=Lo
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /routing bgp instance
-set default redistribute-connected=yes 
+set default router-id=6.6.6.6
 /routing ospf instance
 set [ find default=yes ] router-id=6.6.6.6
 /ip address
