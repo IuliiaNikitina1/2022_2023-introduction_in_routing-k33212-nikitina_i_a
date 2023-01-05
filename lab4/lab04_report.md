@@ -339,33 +339,37 @@ set name=R01.SVL
 
 * R01.NY:
 
-![NY](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/NY.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/NY.png" width = "680" height = "200" alt = "R01.NY"/>
+
 
 * R01.SPB:
 
-![SPB](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SPB.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SPB.png" width = "680" height = "200" alt = "R01.SPB"/>
+
+
 
 * R01.SVL:
 
-![SVL](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SVL.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SVL.png" width = "680" height = "200" alt = "R01.SVL"/>
 
 
 3.2 Следом за VRF было проверено соединение **bgp**:
 
 * C роутера R01.NY:
 
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/NY%20-%20ping.png" width = "630" height = "250" alt = "R01.NY-ping"/>
 
-![NY-ping](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/NY%20-%20ping.png)
 
 * C роутера R01.SPB:
 
 
-![NY-ping](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SPB%20-%20ping.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SPB%20-%20ping.png" width = "630" height = "250" alt = "R01.SPB-ping"/>
+
 
 * C роутера R01.SVL:
 
 
-![NY-ping](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SVL%20-%20ping.png)
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SVL%20-%20ping.png" width = "630" height = "250" alt = "R01.SVL-ping"/>
 
 
 * Часть 2. Настройка **VPLS**
