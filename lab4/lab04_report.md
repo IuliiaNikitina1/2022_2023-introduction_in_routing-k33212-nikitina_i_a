@@ -103,7 +103,7 @@ topology:
     - endpoints: ["R01.LBN:eth3","R01.SVL:eth1"]
 ```
 
-2. Следом за развертыванием сети была произведена настройка каждого роутера. Текст всех конфигураций представлен ниже:
+2. Следом за развертыванием сети была произведена настройка каждого роутера:
 
 * R01.NY:
 
@@ -326,6 +326,46 @@ add area=backbone
 /system identity
 set name=R01.SVL
 ```
+
+3. Проверка соединения внутри сети связи была произведена успешно. 
+
+
+3.1 Первым делом была проверена связность **VRF**, для этого была применена команда:
+  ```
+  routing bgp vpnv4-route print
+  ```
+  
+  Результаты проверки (на роутерах **R01.NY**, **R01.SPB** и **R01.SVL**) представлены на скринах ниже:
+
+* R01.NY:
+
+![NY](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/NY.png)
+
+* R01.SPB:
+
+![SPB](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SPB.png)
+
+* R01.SVL:
+
+![SVL](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SVL.png)
+
+
+3.2 Следом за VRF было проверено соединение **bgp**:
+
+* C роутера R01.NY:
+
+
+![NY-ping](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/NY%20-%20ping.png)
+
+* C роутера R01.SPB:
+
+
+![NY-ping](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SPB%20-%20ping.png)
+
+* C роутера R01.SVL:
+
+
+![NY-ping](https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/SVL%20-%20ping.png)
 
 
 * Часть 2. Настройка VPLS
