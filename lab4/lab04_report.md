@@ -429,8 +429,10 @@ set name=PC3
 add name=Lo
 add name=VPLS
 /interface vpls
-add disabled=no l2mtu=1500 mac-address=02:3F:7D:D0:E8:46 name=vpls1 remote-peer=4.4.4.4 vpls-id=10:0
-add disabled=no l2mtu=1500 mac-address=02:FD:62:EA:D0:A9 name=vpls2 remote-peer=6.6.6.6 vpls-id=10:0
+add disabled=no l2mtu=1500 mac-address=02:22:8B:35:7C:8A name=vpls1 \
+    remote-peer=4.4.4.4 vpls-id=10:0
+add disabled=no l2mtu=1500 mac-address=02:0F:21:CC:DF:E8 name=vpls2 \
+    remote-peer=6.6.6.6 vpls-id=10:0
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /routing bgp instance
@@ -469,8 +471,8 @@ set name=R01.NY
 add name=Lo
 add name=VPLS
 /interface vpls
-add disabled=no l2mtu=1500 mac-address=02:3F:7D:D0:E8:46 name=vpls1 remote-peer=1.1.1.1 vpls-id=10:0
-add disabled=no l2mtu=1500 mac-address=02:FD:62:EA:D0:A9 name=vpls2 remote-peer=6.6.6.6 vpls-id=10:0
+add disabled=no l2mtu=1500 mac-address=02:4A:FD:CA:95:A7 name=vpls1 remote-peer=1.1.1.1 vpls-id=10:0
+add disabled=no l2mtu=1500 mac-address=02:F5:B4:1B:42:B3 name=vpls2 remote-peer=6.6.6.6 vpls-id=10:0
 /interface wireless security-profiles
 set [ find default=yes ] supplicant-identity=MikroTik
 /routing bgp instance
@@ -478,8 +480,9 @@ set default router-id=4.4.4.4
 /routing ospf instance
 set [ find default=yes ] router-id=4.4.4.4
 /interface bridge port
-add bridge=VPLS interface=ether2
+add bridge=VPLS interface=ether3
 add bridge=VPLS interface=vpls1
+add bridge=VPLS interface=vpls2
 /ip address
 add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
 add address=4.4.4.4 interface=Lo network=4.4.4.4
@@ -517,7 +520,7 @@ set default router-id=6.6.6.6
 /routing ospf instance
 set [ find default=yes ] router-id=6.6.6.6
 /interface bridge port
-add bridge=VPLS interface=ether3
+add bridge=VPLS interface=ether2
 add bridge=VPLS interface=vpls1
 add bridge=VPLS interface=vpls2
 /ip address
