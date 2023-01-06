@@ -376,7 +376,7 @@ set name=R01.SVL
 
 1. Перед началом выполнения второй части лабораторной работы на роутерах R01.NY, R01.SPB и R01.SVL был разобран VRF. 
 
-2. На компьютерах **PC1**, **PC2**, **PC3** была настроена IP-адресация:
+2. Компьютерам **PC1**, **PC2**, **PC3** были выданы IP-адреса из сети 192.168.0.0/24:
 
 * PC1:
 
@@ -385,7 +385,7 @@ set name=R01.SVL
 set [ find default=yes ] supplicant-identity=MikroTik
 /ip address
 add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
-add address=192.168.1.2/30 interface=ether2 network=192.168.1.0
+add address=192.168.0.1/24 interface=ether2 network=192.168.0.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /system identity
@@ -399,7 +399,7 @@ set name=PC1
 set [ find default=yes ] supplicant-identity=MikroTik
 /ip address
 add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
-add address=192.168.2.2/30 interface=ether2 network=192.168.2.0
+add address=192.168.0.2/24 interface=ether2 network=192.168.0.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /system identity
@@ -413,14 +413,14 @@ set name=PC2
 set [ find default=yes ] supplicant-identity=MikroTik
 /ip address
 add address=172.31.255.30/30 interface=ether1 network=172.31.255.28
-add address=192.168.3.2/30 interface=ether2 network=192.168.3.0
+add address=192.168.0.3/24 interface=ether2 network=192.168.0.0
 /ip dhcp-client
 add disabled=no interface=ether1
 /system identity
 set name=PC3
 ```
 
-3. После чего на роутеры R01.NY, R01.SPB и R01.SVL были добавлены бриджи VPLS и между ними была настроена связность. Измененные конфигурации трех этих роутеров представлены ниже:
+3. После чего на роутеры R01.NY, R01.SPB и R01.SVL были добавлены бриджи VPLS, обеспечивающие связность сети. Измененные конфигурации трех этих роутеров представлены ниже:
 
 * R01.NY:
 
@@ -543,7 +543,21 @@ add area=backbone
 set name=R01.SVL
 ```
 
+4. В конце, при помощи команды **ping**, было провереноо соединение между компьютерами PC1, PC2 и PC3. Результаты проверки оказались успешны для каждго устройства:
 
+* PC1:
+
+![PC1]()
+
+
+* PC2:
+
+![PC2]()
+
+
+* PC3:
+
+![PC3]()
 
 
 
