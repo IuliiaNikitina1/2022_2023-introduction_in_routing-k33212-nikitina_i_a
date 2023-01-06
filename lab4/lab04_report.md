@@ -547,20 +547,24 @@ set name=R01.SVL
 
 * PC1:
 
-![PC1]()
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/PC1.png" width = "630" height = "250" alt = "PC1-ping"/>
 
 
 * PC2:
 
-![PC2]()
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/PC2.png" width = "630" height = "250" alt = "PC2-ping"/>
 
 
 * PC3:
 
-![PC3]()
+<img src = "https://github.com/IuliiaNikitina1/2022_2023-introduction_in_routing-k33212-nikitina_i_a/blob/main/lab4/images/PC3.png" width = "630" height = "250" alt = "PC3-ping"/>
 
 
 
 #### 3. Выводы:
 
-  .
+  В ходе выполнения лабораторной работы были выполнены все поставленные задачи. В частности, была развернута сеть связи, состоящая из трех конечных устройств и шести роутеров, на которых были настроены IP-адреса, OSPF и MPLS, а также VRF в первой части работы и VPLS - во второй. Сеть была успешно протестирована на наличие соединения между устройствами.
+  
+  
+  
+  
